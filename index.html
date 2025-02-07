@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles (unchanged) */
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        /* Sections (unchanged) */
+        .about,
+        .projects,
+        .skills,
+        .contact {
+            padding: 60px 0;
+        }
+
+        .about,
+        .skills {
+            background: #f9f9f9;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        /* Updated Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .skill-item {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-item i {
+            font-size: 3em;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .skill-item .skill-name {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* Updated Contact Section */
+        .contact-info {
+            margin-bottom: 30px;
+        }
+
+        .contact-info p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .contact-info i {
+            color: #2c3e50;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-links a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-size: 2em;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #3498db;
+        }
+
+        /* Project Section (unchanged) */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-info {
+            padding: 20px;
+        }
+
+        .project-info h3 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 60px 0;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .social-links {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header section unchanged -->
+    <header>
+        <div class="container">
+            <h1>Hitcha Natanael Panjaitan</h1>
+            <p>Web Developer</p>
+        </div>
+    </header>
+
+    <!-- About section unchanged -->
+    <section class="about">
+        <div class="container">
+            <h2>Tentang Saya</h2>
+            <p>
+                Saya adalah lulusan baru Sistem Informasi dari Jurusan Ilmu Komputer, Universitas Riau, dengan fokus dan
+                passion di bidang pengembangan web. Dengan penguasaan teknologi seperti PHP,
+                Laravel, HTML, dan Bootstrap 5, saya memiliki fondasi yang kuat untuk membangun aplikasi berbasis web.
+                Sebagai seorang yang bersemangat dalam pembelajaran dan pengembangan diri, saya selalu antusias untuk
+                menghadapi tantangan
+                baru dan berkontribusi dalam tim. Tujuan karir saya adalah menjadi backend developer profesional yang
+                dapat
+                memberikan solusi teknologi yang efektif dan inovatif.
+            </p>
+        </div>
+    </section>
+
+    <!-- Projects section unchanged -->
+    <section class="projects">
+        <div class="container">
+            <h2>Proyek</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="rental.jpg" alt="Project 1">
+                    <div class="project-info">
+                        <h3>Pekanbaru Rental Online</h3>
+                        <p>
+                            Projek ini dibuat untuk user yang ingin memesan rental secara online. Dengan mekanisme yang
+                            ada, user bisa melakukan pemesanan, memilih mobil, memilih mobil nya dijemput atau
+                            diantarkan, dan juga bisa memilih rental menggunakan supir dan tanpa supir. Projek ini
+                            dibangun
+                            menggunakan Laravel 11.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="balance.jpg" alt="Project 2">
+                    <div class="project-info">
+                        <h3>Balance Cairan</h3>
+                        <p>
+                            Projek ini dibuat untuk beberapa user, Perawat dan Pasien. Website ini nantinya digunakan
+                            untuk menghitung Balance Cairan dari pasien dengan menggunakan perhitungan tertentu dari
+                            berapa
+                            jumlah cairan Intake dan Output. Yang bisa menginputkan cairannya adalah Perawat dan Pasien.
+                            Projek ini dibangun menggunakan Laravel 11.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="fs.jpg" alt="Project 3">
+                    <div class="project-info">
+                        <h3>Web Flashsoft Indonesia</h3>
+                        <p>
+                            Projek ini dibuat untuk user yang ingin belajar di Flashsoft Indonesia. Jadi user yang masuk
+                            ke website ini bisa melihat beberapa informasi seperti paket belajar, bahasa pemrograman,
+                            dan harga nya.
+                            Projek ini dibangun menggunakan Laravel 11.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Updated Skills section -->
+    <section class="skills">
+        <div class="container">
+            <h2>Keahlian</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fab fa-laravel"></i>
+                    <div class="skill-name">Laravel</div>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-bootstrap"></i>
+                    <div class="skill-name">Bootstrap</div>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-php"></i>
+                    <div class="skill-name">PHP</div>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-flutter"></i>
+                    <div class="skill-name">Flutter</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Updated Contact section -->
+    <section class="contact">
+        <div class="container">
+            <h2>Kontak</h2>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i>natanaelpanjaitan@gmail.com</p>
+                <p><i class="fas fa-phone"></i>082285774472</p>
+            </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/hitcha-natanael-panjaitan-a07007220/" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/hitchanatanael?tab=repositories" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Natanael. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
